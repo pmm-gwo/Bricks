@@ -2,6 +2,7 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -11,6 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
         Set<String> notUsedBricks = new HashSet<>();
+        HashMap<String, Integer> listBricks = new HashMap<>(); // klocki z listy spisanej przez Pania, gdzie:
+        //String - nazwa klocka, Integer- ilosc powtorzen danego klocka
+        HashMap<Integer, HashMap<String, Integer>> allInstructionsBricks = new HashMap<>(); // klocki z listy spisanej przez Pania, gdzie:
+        // String - numer instrukcji, Hashmap - lista klockow z pojedynczej instrukcji(analogicznie do spisu intrukcji pani )
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("plik.txt"));

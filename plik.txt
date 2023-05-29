@@ -1,0 +1,10 @@
+0:AAAA\n
+0:BBBB\n
+0:BBBB\n
+0:CCOC\n
+1:BBBB\n
+1:BBUB\n
+1:BBBB\n
+2:AAAA\n
+3:AAAOHY\n
+4:DDOD

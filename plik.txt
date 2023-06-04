@@ -1,4 +1,4 @@
-0:AAAA\n
+0:AAAA
 0:BBBB\n
 0:BBBB\n
 0:CCOC\n
@@ -7,4 +7,8 @@
 1:BBBB\n
 2:AAAA\n
 3:AAAOHY\n
+3:BBBB\n
+3:CCOC\n
+3:BBBB\n
+3:BBUB\n
 4:DDOD

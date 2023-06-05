@@ -1,6 +1,7 @@
 package com.company;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -36,6 +37,7 @@ public class Bricks {
                 } else if (isValidFile(brick) && number == 0) {
                     listBricks.put(code, listBricks.getOrDefault(code, 0) + 1);
                 } else if (isValidFile(brick) && number % 3 == 0) {
+
                     //biore kolejny numer%3, i jesli kazdy klocek z nr x = klocek z 0 to sciagam go z mapy 0 i dodaje do mapy countBricksStageOne,
                     // jesli brakuje chociaz jednego to przerywam i zapisuje do niewykonanych instrukcji
                     bricksStageOne.put(code, bricksStageOne.getOrDefault(code, 0) + 1);
@@ -46,8 +48,8 @@ public class Bricks {
                     bricksStageTwo.put(code, bricksStageTwo.getOrDefault(code, 0) + 1);
                     instructionsStageTwo.put(number, (HashMap<String, Integer>) bricksStageTwo);
                 }
-
             }
+
 
             int notUsedBricksCounter = countNotUsedBricks.values().stream().mapToInt(Integer::intValue).sum();
 
@@ -59,7 +61,7 @@ public class Bricks {
             System.out.println(notUsedBricks);
             reader.close();
 
-            } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
